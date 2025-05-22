@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Animação Barra Dinâmica</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes gradient-left {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    @keyframes gradient-right {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .animate-gradient-left {
+      animation: gradient-left 1.5s linear infinite;
+    }
+
+    .animate-gradient-right {
+      animation: gradient-right 1.5s linear infinite;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 flex flex-col gap-8 justify-center items-center min-h-screen text-white">
+
+  <div class="text-lg font-bold">Barra com Brilho Esquerda ➡️ Direita</div>
+  <div class="relative w-64 h-1 bg-gray-600 overflow-hidden">
+    <div class="absolute top-0 left-0 h-full w-1/3 bg-[#0076FF] animate-gradient-left"></div>
+  </div>
+
+  <div class="text-lg font-bold mt-8">Barra com Brilho Direita ⬅️ Esquerda</div>
+  <div class="relative w-64 h-1 bg-gray-600 overflow-hidden">
+    <div class="absolute top-0 right-0 h-full w-1/3 bg-[#0076FF] animate-gradient-right"></div>
+  </div>
+
+</body>
+</html>
