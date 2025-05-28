@@ -1,41 +1,144 @@
-<!-- Divisor visual antes do Footer -->
-<hr class="my-6 border-gray-300">
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Interface IA AORKIA | Diagnóstico Estratégico</title>
 
-<footer class="bg-gray-900 py-12 mb-0 pb-0" role="contentinfo">
-  <div class="container mx-auto max-w-6xl px-4 grid grid-cols-1 md:grid-cols-12 gap-12 text-center md:text-left">
-    
-    <!-- Coluna 1: Logo e social -->
-    ... <!-- (conteúdo inalterado) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0076FF',
+            secondary: '#4A90E2'
+          },
+          borderRadius: {
+            none: '0px',
+            sm: '4px',
+            DEFAULT: '8px',
+            md: '12px',
+            lg: '16px',
+            xl: '20px',
+            '2xl': '24px',
+            '3xl': '32px',
+            full: '9999px',
+            button: '8px'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    * { font-family: 'Corbel', sans-serif; }
+    .hero-gradient { background: radial-gradient(circle at 50% 50%, rgba(0, 118, 255, 0.08) 0%, rgba(255, 255, 255, 0) 50%); }
+    .gradient-text { background: linear-gradient(135deg, #0076FF, #4A90E2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hover-scale:hover { transform: scale(1.05); }
+    .pulse { animation: pulse 2s infinite; }
+    @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+  </style>
+</head>
+<body class="bg-white text-[#1A1F36]">
 
-    <!-- Coluna 2: Soluções -->
-    ... <!-- (conteúdo inalterado) -->
-
-    <!-- Coluna 3: Contato -->
-    ... <!-- (conteúdo inalterado) -->
-    
-  </div>
-
-  <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-center md:justify-between items-center px-4 md:px-8 text-center md:text-left">
-    <p class="text-sm sm:text-base md:text-lg text-gray-400">
-      © 2025 AORKIA. Todos os direitos reservados.
-    </p>
-    <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 mt-4 md:mt-0">
-      <a href="/privacy.html" class="text-sm sm:text-base md:text-lg hover:underline">Política de Privacidade</a>
-      <a href="/terms.html" class="text-sm sm:text-base md:text-lg hover:underline">Termos de Uso</a>
-      <a href="#" class="text-sm sm:text-base md:text-lg hover:underline">Cookies</a>
+  <header class="fixed top-0 w-full bg-gray-900/95 backdrop-blur-md z-50">
+    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-16">
+      <img src="logo_aorkia_white.png" alt="Logo AORKIA" class="h-10">
+      <nav class="hidden md:flex space-x-8">
+        <a href="/solucoes" class="text-white hover:text-primary">Soluções</a>
+        <a href="/sobre" class="text-white hover:text-primary">Sobre</a>
+        <a href="/contato" class="text-white hover:text-primary">Contato</a>
+      </nav>
+      <button class="md:hidden text-white"><i class="ri-menu-line text-2xl"></i></button>
     </div>
-  </div>
+  </header>
 
-  <!-- Assinatura AORKIA -->
-  <div class="mt-4 border-t border-gradient-to-r from-primary via-secondary to-primary pt-4 text-center">
-    <p class="text-xs sm:text-sm md:text-base text-primary font-bold">
-      Desenvolvido por AORKIA
-    </p>
-    <p class="text-xs sm:text-sm md:text-base italic text-gray-500">
-      Otimize sua presença digital para máxima conversão: 
-      <a href="mailto:presencadigital@aorkia.com" class="text-primary hover:text-secondary hover:underline transition-colors duration-300">
-        presencadigital@aorkia.com
-      </a>
-    </p>
-  </div>
-</footer>
+  <main class="pt-20">
+    <section class="hero-gradient py-20">
+      <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+        <div class="flex-1 space-y-6">
+          <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight gradient-text">Interface IA AORKIA</h1>
+          <p class="text-lg md:text-xl">Transforme seu primeiro contato com a AORKIA em uma experiência consultiva, com diagnóstico estratégico automatizado e recomendações personalizadas.</p>
+          <div class="flex gap-4">
+            <a href="#diagnostico" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/90 hover-scale">Iniciar Diagnóstico</a>
+            <a href="#solucoes" class="border border-gray-300 px-6 py-3 rounded-lg hover:bg-gray-50 hover-scale">Explorar Soluções</a>
+          </div>
+        </div>
+        <div class="flex-1 relative">
+          <img src="https://readdy.ai/api/search-image?query=advanced%20AI%20interface&width=600&height=400" class="rounded-3xl shadow-xl" alt="IA Interface">
+        </div>
+      </div>
+    </section>
+
+    <section id="solucoes" class="py-20">
+      <div class="max-w-7xl mx-auto px-4 text-center mb-16">
+        <h2 class="text-3xl font-bold mb-4">Nossas Soluções Especializadas</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Explore as soluções da AORKIA. Cada produto foi projetado para resolver desafios críticos de infraestrutura, segurança e receita.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white p-8 rounded-3xl shadow-lg border hover:shadow-xl transition-all">
+          <i class="ri-cloud-line text-primary text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Backup SaaS Estratégico</h3>
+          <p class="text-gray-600">Proteção contínua, governança completa e resiliência operacional para ambientes SaaS.</p>
+        </div>
+        <div class="bg-white p-8 rounded-3xl shadow-lg border hover:shadow-xl transition-all">
+          <i class="ri-database-2-line text-primary text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Infraestrutura Estratégica</h3>
+          <p class="text-gray-600">Integração, segurança e alta performance — transforme sua infraestrutura em um ativo competitivo.</p>
+        </div>
+        <div class="bg-white p-8 rounded-3xl shadow-lg border hover:shadow-xl transition-all">
+          <i class="ri-shield-line text-primary text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Segurança Cloud</h3>
+          <p class="text-gray-600">Visibilidade total, conformidade automatizada e segurança proativa para ambientes multicloud.</p>
+        </div>
+        <div class="bg-white p-8 rounded-3xl shadow-lg border hover:shadow-xl transition-all">
+          <i class="ri-line-chart-line text-primary text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Receita B2B</h3>
+          <p class="text-gray-600">Unificação de processos, automação e inteligência aplicada à sua geração de receita.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <img src="logo_aorkia_white.png" alt="Logo AORKIA" class="h-10 mb-4">
+        <p>Soluções estratégicas para empresas que buscam excelência e inovação no mercado B2B.</p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-4">Soluções</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-primary">Backup SaaS</a></li>
+          <li><a href="#" class="hover:text-primary">Infraestrutura</a></li>
+          <li><a href="#" class="hover:text-primary">Segurança Cloud</a></li>
+          <li><a href="#" class="hover:text-primary">Receita B2B</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-4">Empresa</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-primary">Sobre</a></li>
+          <li><a href="#" class="hover:text-primary">Contato</a></li>
+          <li><a href="#" class="hover:text-primary">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-4">Contato</h4>
+        <ul class="space-y-2">
+          <li>contato@aorkia.com</li>
+          <li>+55 31 98801-9006</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+      <p>&copy; 2025 AORKIA. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
