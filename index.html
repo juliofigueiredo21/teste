@@ -1,345 +1,139 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>Interface IA AORKIA | Diagnóstico Estratégico</title>
+  <title>Interface IA AORKIA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fontes -->
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#0076FF',
-            secondary: '#4A90E2'
-          },
-          borderRadius: {
-            none: '0px',
-            sm: '4px',
-            DEFAULT: '8px',
-            md: '12px',
-            lg: '16px',
-            xl: '20px',
-            '2xl': '24px',
-            '3xl': '32px',
-            full: '9999px',
-            button: '8px'
-          }
-        }
-      }
-    }
-  </script>
+
   <style>
-    * { font-family: 'Corbel', sans-serif; }
-    .hero-gradient { background: radial-gradient(circle at 50% 50%, rgba(0, 118, 255, 0.08) 0%, rgba(255, 255, 255, 0) 50%); }
-    .gradient-text { background: linear-gradient(135deg, #0076FF, #4A90E2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .hover-scale:hover { transform: scale(1.05); }
-    .pulse { animation: pulse 2s infinite; }
-    @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+    body {
+      font-family: 'Corbel', sans-serif;
+      text-rendering: optimizeLegibility;
+    }
+    .gradient-bg {
+      background: linear-gradient(to right, rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.3));
+      backdrop-filter: blur(4px);
+    }
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
   </style>
 </head>
-<body class="bg-white text-[#1A1F36]">
 
-<header class="fixed top-0 w-full bg-gray-900/95 backdrop-blur-md z-50">
-  <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-16">
-    <img src="logo_aorkia_white.png" alt="Logo AORKIA" class="h-10">
-    <nav class="hidden md:flex space-x-8">
-      <a href="/solucoes" class="text-white hover:text-primary">Soluções</a>
-      <a href="/sobre" class="text-white hover:text-primary">Sobre</a>
-      <a href="/contato" class="text-white hover:text-primary">Contato</a>
-    </nav>
-    <button class="md:hidden text-white"><i class="ri-menu-line text-2xl"></i></button>
+<body class="bg-gray-900 text-white">
+
+<!-- Navbar -->
+<nav class="bg-gray-900/95 backdrop-blur-md shadow-sm py-2 fixed w-full z-50 transition-colors duration-200">
+  <div class="container mx-auto max-w-7xl px-4 flex justify-between items-center">
+    <a href="#ia" class="font-bold">AORKIA</a>
+    <div class="space-x-6">
+      <a href="#ia" class="hover:text-blue-500">Início</a>
+      <a href="#diagnostic" class="hover:text-blue-500">Diagnóstico</a>
+      <a href="#solutions" class="hover:text-blue-500">Soluções</a>
+    </div>
   </div>
-</header>
+</nav>
 
-<main class="pt-20">
-  <section class="hero-gradient py-20">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
-      <div class="flex-1 space-y-6">
-        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight gradient-text">Interface IA AORKIA</h1>
-        <p class="text-lg md:text-xl">Transforme seu primeiro contato com a AORKIA em uma experiência consultiva, com diagnóstico estratégico automatizado e recomendações personalizadas.</p>
-        <div class="flex gap-4">
-          <a href="#diagnostico" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/90 hover-scale">Iniciar Diagnóstico</a>
-          <a href="#solucoes" class="border border-gray-300 px-6 py-3 rounded-lg hover:bg-gray-50 hover-scale">Explorar Soluções</a>
-        </div>
+<main class="space-y-16 pt-20">
+
+  <!-- IASection -->
+  <section id="ia" class="container mx-auto max-w-7xl px-4 min-h-[80vh] flex flex-col justify-center space-y-6">
+    <h1 class="text-4xl font-bold">Interface IA AORKIA — Diagnóstico Estratégico Inteligente</h1>
+    <p class="text-lg">Identifique rapidamente as áreas críticas da sua operação e receba orientações estratégicas personalizadas.</p>
+
+    <div class="rounded-3xl shadow-lg hover:shadow-xl p-6 flex space-x-6 items-center gradient-bg">
+      <img src="https://via.placeholder.com/80" alt="IA AORKIA" class="w-20 h-20 rounded-full border-2 border-blue-500 pulse">
+      <div class="space-y-2">
+        <span class="text-sm text-blue-400">Análise em tempo real</span>
+        <span class="text-sm">Diagnóstico personalizado</span>
+        <span class="text-sm">Tempo estimado: 3 min</span>
       </div>
-      <div class="flex-1 relative">
-        <img src="https://readdy.ai/api/search-image?query=advanced%20AI%20interface&width=600&height=400" class="rounded-3xl shadow-xl" alt="IA Interface">
+    </div>
+
+    <a href="#diagnostic" class="bg-blue-500 text-white py-3 px-6 rounded-lg hover:bg-blue-600 transform hover:scale-105 transition-all">
+      Iniciar Diagnóstico com IA
+    </a>
+  </section>
+
+  <!-- NavigationSection -->
+  <section id="solutions" class="container mx-auto max-w-7xl px-4 min-h-[20vh]">
+    <h2 class="text-2xl font-semibold">Prefere navegar por conta própria?</h2>
+    <p class="mb-6">Explore diretamente as nossas soluções especializadas.</p>
+    <div class="grid grid-cols-2 gap-6 md:gap-8">
+      <div class="aspect-[4/3] transform hover:scale-105 transition-all shadow-lg hover:shadow-xl rounded-xl p-4 bg-white text-black">
+        <div class="mb-2">🔒</div>
+        <h3 class="font-semibold">Backup SaaS Estratégico</h3>
+        <p class="text-sm mb-2">Proteção avançada para ambientes SaaS.</p>
+        <a href="#solutions" class="text-blue-500 hover:underline">Explorar Solução</a>
+      </div>
+      <div class="aspect-[4/3] transform hover:scale-105 transition-all shadow-lg hover:shadow-xl rounded-xl p-4 bg-white text-black">
+        <div class="mb-2">🏗️</div>
+        <h3 class="font-semibold">Infraestrutura Estratégica</h3>
+        <p class="text-sm mb-2">Fundamentação robusta para operações críticas.</p>
+        <a href="#solutions" class="text-blue-500 hover:underline">Explorar Solução</a>
+      </div>
+      <div class="aspect-[4/3] transform hover:scale-105 transition-all shadow-lg hover:shadow-xl rounded-xl p-4 bg-white text-black">
+        <div class="mb-2">☁️</div>
+        <h3 class="font-semibold">Segurança Cloud</h3>
+        <p class="text-sm mb-2">Blindagem total para ambientes em nuvem.</p>
+        <a href="#solutions" class="text-blue-500 hover:underline">Explorar Solução</a>
+      </div>
+      <div class="aspect-[4/3] transform hover:scale-105 transition-all shadow-lg hover:shadow-xl rounded-xl p-4 bg-white text-black">
+        <div class="mb-2">💼</div>
+        <h3 class="font-semibold">Receita B2B</h3>
+        <p class="text-sm mb-2">Maximização de performance em vendas corporativas.</p>
+        <a href="#solutions" class="text-blue-500 hover:underline">Explorar Solução</a>
       </div>
     </div>
   </section>
 
-  <section id="chat-ia" class="py-20 bg-gradient-to-r from-gray-50 to-white">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row gap-8">
-
-      <div class="md:basis-7/12 w-full bg-white rounded-3xl shadow-xl p-6 flex flex-col space-y-4">
-        <div class="flex items-center gap-3 mb-4">
-          <img src="avatar_ia_aorkia.png" alt="Avatar IA" class="w-12 h-12 rounded-full border-2 border-primary animate-pulse">
-          <h2 class="text-xl font-bold text-gray-900">IA AORKIA</h2>
-        </div>
-        <div id="chat-history" class="chat-container flex-1 overflow-y-auto space-y-4">
-          <div class="bg-primary/10 p-4 rounded-lg text-gray-700 max-w-[75%]">Olá! Sou a IA da AORKIA. Vamos iniciar seu diagnóstico estratégico?</div>
-        </div>
-        <div class="flex items-center gap-2">
-          <input type="text" placeholder="Digite sua mensagem..." class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:outline-none">
-          <button class="bg-primary text-white px-4 py-3 rounded-lg hover:bg-primary/90 transition-all">
-            <i class="ri-send-plane-2-line text-xl"></i>
-          </button>
-        </div>
+  <!-- DiagnosticInterface -->
+  <section id="diagnostic" class="container mx-auto max-w-7xl px-4 min-h-screen flex">
+    <!-- Chat -->
+    <div class="w-2/3 space-y-4 p-4">
+      <h3 class="text-xl font-bold">IA AORKIA</h3>
+      <div class="bg-gray-800 rounded-xl p-4 leading-relaxed">
+        Bem-vindo à AORKIA.<br>
+        Sou sua assistente estratégica para diagnóstico preliminar.<br>
+        Vamos juntos identificar com precisão qual área da sua operação exige evolução imediata.
       </div>
+      <div class="space-y-2">
+        <button class="block w-full bg-blue-500 py-2 rounded-lg hover:bg-blue-600">Backup SaaS Estratégico</button>
+        <button class="block w-full bg-blue-500 py-2 rounded-lg hover:bg-blue-600">Infraestrutura Estratégica</button>
+        <button class="block w-full bg-blue-500 py-2 rounded-lg hover:bg-blue-600">Segurança Cloud</button>
+        <button class="block w-full bg-blue-500 py-2 rounded-lg hover:bg-blue-600">Receita B2B</button>
+      </div>
+    </div>
 
-      <aside class="md:basis-5/12 w-full bg-white rounded-3xl shadow-xl p-6 space-y-6 backdrop-blur-md">
-        <h3 class="text-lg font-semibold text-gray-900">Status do Diagnóstico</h3>
-        <div class="w-full bg-gray-100 rounded-full h-3">
-          <div class="bg-primary h-3 rounded-full" style="width: 20%"></div>
-        </div>
-        <div class="space-y-2">
-          <h4 class="text-sm font-semibold text-gray-700">Áreas em Análise</h4>
-          <ul class="list-disc list-inside text-gray-600 text-sm">
-            <li>Backup SaaS Estratégico</li>
-            <li>Infraestrutura Estratégica</li>
-            <li>Segurança Cloud</li>
-            <li>Receita B2B</li>
-          </ul>
-        </div>
-        <div class="text-sm text-gray-500 italic">IA AORKIA está analisando seus dados em tempo real...</div>
-      </aside>
-
+    <!-- Painel Dinâmico -->
+    <div class="w-1/3 p-4 bg-gray-800 backdrop-blur-md">
+      <h4 class="font-semibold">Status:</h4>
+      <p class="text-sm">Analisando seu contexto...</p>
+      <div class="animate-pulse mt-2">
+        <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-1"></span>
+        <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-1"></span>
+        <span class="inline-block w-2 h-2 bg-blue-500 rounded-full"></span>
+      </div>
     </div>
   </section>
 
-  <section id="resultados-ia" class="hidden py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-12 gap-8">
-      <div class="md:col-span-4 bg-gray-50 rounded-3xl shadow-lg p-6 space-y-4">
-        <h3 class="text-lg font-semibold text-gray-900">Histórico</h3>
-        <div class="text-gray-600 text-sm">Resumo da interação com a IA AORKIA.</div>
-      </div>
-      <div class="md:col-span-8 bg-white rounded-3xl shadow-xl p-8 space-y-6">
-        <h2 class="text-2xl font-bold text-gray-900 mb-4">Recomendações Estratégicas</h2>
-        <ul class="list-disc list-inside text-gray-700 space-y-2">
-          <li>Fortalecer a estratégia de backup com Keepit para resiliência total.</li>
-          <li>Otimizar a infraestrutura crítica para escalabilidade.</li>
-          <li>Ativar automação em Segurança Cloud com CSPM/CNAPP.</li>
-          <li>Unificar processos de Receita B2B para previsibilidade.</li>
-        </ul>
-        <div class="flex gap-4">
-          <a href="#" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/90">Acessar Blueprint Técnico</a>
-          <a href="#" class="border border-primary text-primary px-6 py-3 rounded-lg hover:bg-primary/10">Agendar Conversa</a>
-        </div>
-      </div>
-    </div>
-  </section>
 </main>
 
-<footer class="bg-gray-900 text-white py-12">
-  <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
-    <div>
-      <img src="logo_aorkia_white.png" alt="Logo AORKIA" class="h-10 mb-4">
-      <p>Soluções estratégicas para empresas que buscam excelência e inovação no mercado B2B.</p>
-    </div>
-    <div>
-      <h4 class="font-semibold mb-4">Soluções</h4>
-      <ul class="space-y-2">
-        <li><a href="#" class="hover:text-primary">Backup SaaS</a></li>
-        <li><a href="#" class="hover:text-primary">Infraestrutura</a></li>
-        <li><a href="#" class="hover:text-primary">Segurança Cloud</a></li>
-        <li><a href="#" class="hover:text-primary">Receita B2B</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="font-semibold mb-4">Empresa</h4>
-      <ul class="space-y-2">
-        <li><a href="#" class="hover:text-primary">Sobre</a></li>
-        <li><a href="#" class="hover:text-primary">Contato</a></li>
-        <li><a href="#" class="hover:text-primary">Blog</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="font-semibold mb-4">Contato</h4>
-      <ul class="space-y-2">
-        <li>contato@aorkia.com</li>
-        <li>+55 31 98801-9006</li>
-      </ul>
-    </div>
-  </div>
-  <div class="border-t border-gray-800 mt-12 pt-8 text-center">
-    <p>&copy; 2025 AORKIA. Todos os direitos reservados.</p>
-  </div>
+<!-- Footer -->
+<footer class="container mx-auto max-w-7xl px-4 py-12 text-center">
+  <p class="text-sm text-gray-400">© 2025 AORKIA. Todos os direitos reservados.</p>
 </footer>
 
-<script>
-  const chatHistory = document.getElementById('chat-history');
-  const inputField = document.querySelector('#chat-ia input[type="text"]');
-  const sendButton = document.querySelector('#chat-ia button');
-  const progressBar = document.querySelector('#chat-ia .bg-primary');
-
-  let progress = 20;
-
-  // Simula resposta da IA
-  function iaResponse(userInput) {
-    const responses = [
-      "Interessante! Vamos aprofundar nessa questão.",
-      "Ótimo ponto! Já estamos analisando.",
-      "Dados recebidos, preparando recomendações...",
-      "Análise concluída! Veja as recomendações abaixo."
-    ];
-    const index = Math.floor(Math.random() * responses.length);
-    return responses[index];
-  }
-
-  // Atualiza barra de progresso
-  function updateProgress() {
-    if (progress < 100) {
-      progress += 20;
-      progressBar.style.width = progress + '%';
-    }
-  }
-
-  // Scroll automático
-  function scrollToBottom() {
-    chatHistory.scrollTop = chatHistory.scrollHeight;
-  }
-
-  // Adiciona mensagem ao chat
-  function addMessage(content, sender = 'user') {
-    const message = document.createElement('div');
-    message.className = `p-4 rounded-lg max-w-[75%] ${sender === 'ia' ? 'bg-primary/10 text-gray-700' : 'bg-gray-100 text-gray-900 self-end'}`;
-    message.textContent = content;
-    chatHistory.appendChild(message);
-    scrollToBottom();
-  }
-
-  // Enviar mensagem
-  function sendMessage() {
-    const userInput = inputField.value.trim();
-    if (!userInput) return;
-
-    addMessage(userInput, 'user');
-    inputField.value = '';
-
-    setTimeout(() => {
-      addMessage('IA AORKIA está digitando...', 'ia');
-      scrollToBottom();
-
-      setTimeout(() => {
-        const lastIaMsg = chatHistory.querySelectorAll('div.bg-primary\\/10:last-child')[0];
-        if (lastIaMsg) lastIaMsg.remove();
-
-        addMessage(iaResponse(userInput), 'ia');
-        updateProgress();
-
-        // Se progresso atingir 100%, mostra painel de resultados
-        if (progress >= 100) {
-          document.getElementById('resultados-ia').classList.remove('hidden');
-          document.getElementById('chat-ia').classList.add('hidden');
-        }
-      }, 1000);
-
-    }, 500);
-  }
-
-  sendButton.addEventListener('click', sendMessage);
-  inputField.addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') sendMessage();
-  });
-</script>
-
-
--------- Reservado para ia-aorkia-chat.js ------------
-
-<script>
-  const chatHistory = document.getElementById('chat-history');
-  const inputField = document.querySelector('#chat-ia input[type="text"]');
-  const sendButton = document.querySelector('#chat-ia button');
-  const progressBar = document.querySelector('#chat-ia .bg-primary');
-
-  let progress = 20;
-
-  // Dicionário com respostas inteligentes e sinônimos
-  const keywordResponses = {
-    'backup': 'Perfeito! Backup SaaS com Keepit garante resiliência total.',
-    'infraestrutura': 'Excelente! Vamos transformar sua infraestrutura em um ativo estratégico.',
-    'infra': 'Excelente! Vamos transformar sua infraestrutura em um ativo estratégico.',
-    'segurança': 'Segurança é prioridade! CSPM/CNAPP para proteção contínua.',
-    'cloud': 'Segurança é prioridade! CSPM/CNAPP para proteção contínua.',
-    'receita': 'Ótimo! Estruturamos Receita B2B para previsibilidade e escala.',
-    'b2b': 'Ótimo! Estruturamos Receita B2B para previsibilidade e escala.'
-  };
-
-  // Função de resposta com detecção inteligente
-  function iaResponse(userInput) {
-    const inputLower = userInput.toLowerCase();
-    for (let keyword in keywordResponses) {
-      if (inputLower.includes(keyword)) {
-        return keywordResponses[keyword];
-      }
-    }
-    return "Interessante! Vamos aprofundar nessa questão.";
-  }
-
-  // Atualiza barra de progresso
-  function updateProgress() {
-    if (progress < 100) {
-      progress += 20;
-      progressBar.style.width = progress + '%';
-    }
-  }
-
-  // Scroll automático
-  function scrollToBottom() {
-    chatHistory.scrollTop = chatHistory.scrollHeight;
-  }
-
-  // Adiciona mensagem ao chat
-  function addMessage(content, sender = 'user') {
-    const message = document.createElement('div');
-    message.className = `p-4 rounded-lg max-w-[75%] ${sender === 'ia' ? 'bg-primary/10 text-gray-700' : 'bg-gray-100 text-gray-900 self-end'}`;
-    message.textContent = content;
-    chatHistory.appendChild(message);
-    scrollToBottom();
-  }
-
-  // Enviar mensagem
-  function sendMessage() {
-    const userInput = inputField.value.trim();
-    if (!userInput) return;
-
-    addMessage(userInput, 'user');
-    inputField.value = '';
-
-    setTimeout(() => {
-      addMessage('IA AORKIA está digitando...', 'ia');
-      scrollToBottom();
-
-      setTimeout(() => {
-        const lastIaMsg = chatHistory.querySelectorAll('div.bg-primary\\/10:last-child')[0];
-        if (lastIaMsg) lastIaMsg.remove();
-
-        const response = iaResponse(userInput);
-        addMessage(response, 'ia');
-        updateProgress();
-
-        if (progress >= 100) {
-          document.getElementById('resultados-ia').classList.remove('hidden');
-          document.getElementById('chat-ia').classList.add('hidden');
-        }
-      }, 1000);
-
-    }, 500);
-  }
-
-  sendButton.addEventListener('click', sendMessage);
-  inputField.addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') sendMessage();
-  });
-</script>
-
-
-  
 </body>
 </html>
