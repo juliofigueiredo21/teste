@@ -249,31 +249,29 @@
   });
 </script>
 
+
+-------- Reservado para ia-aorkia-chat.js ------------
+
 <script>
   const chatHistory = document.getElementById('chat-history');
   const inputField = document.querySelector('#chat-ia input[type="text"]');
   const sendButton = document.querySelector('#chat-ia button');
   const progressBar = document.querySelector('#chat-ia .bg-primary');
-  const resultSection = document.getElementById('resultados-ia');
-  const chatSection = document.getElementById('chat-ia');
 
   let progress = 20;
 
-  // Respostas por palavra-chave
+  // Dicionário com respostas inteligentes e sinônimos
   const keywordResponses = {
-    'backup': 'Ótimo! Nossa solução de Backup SaaS com Keepit garante resiliência e proteção total.',
-    'infraestrutura': 'Perfeito! A AORKIA ajuda a transformar sua infraestrutura em um ativo estratégico.',
-    'segurança': 'Segurança é prioridade! CSPM/CNAPP integrados para conformidade e proteção contínua.',
-    'receita': 'Vamos estruturar sua Receita B2B com processos previsíveis e escaláveis.'
+    'backup': 'Perfeito! Backup SaaS com Keepit garante resiliência total.',
+    'infraestrutura': 'Excelente! Vamos transformar sua infraestrutura em um ativo estratégico.',
+    'infra': 'Excelente! Vamos transformar sua infraestrutura em um ativo estratégico.',
+    'segurança': 'Segurança é prioridade! CSPM/CNAPP para proteção contínua.',
+    'cloud': 'Segurança é prioridade! CSPM/CNAPP para proteção contínua.',
+    'receita': 'Ótimo! Estruturamos Receita B2B para previsibilidade e escala.',
+    'b2b': 'Ótimo! Estruturamos Receita B2B para previsibilidade e escala.'
   };
 
-  const genericResponses = [
-    "Interessante! Vamos aprofundar nessa questão.",
-    "Ótimo ponto! Já estamos analisando.",
-    "Dados recebidos, preparando recomendações...",
-    "Análise concluída! Veja as recomendações abaixo."
-  ];
-
+  // Função de resposta com detecção inteligente
   function iaResponse(userInput) {
     const inputLower = userInput.toLowerCase();
     for (let keyword in keywordResponses) {
@@ -281,10 +279,10 @@
         return keywordResponses[keyword];
       }
     }
-    const index = Math.floor(Math.random() * genericResponses.length);
-    return genericResponses[index];
+    return "Interessante! Vamos aprofundar nessa questão.";
   }
 
+  // Atualiza barra de progresso
   function updateProgress() {
     if (progress < 100) {
       progress += 20;
@@ -292,10 +290,12 @@
     }
   }
 
+  // Scroll automático
   function scrollToBottom() {
     chatHistory.scrollTop = chatHistory.scrollHeight;
   }
 
+  // Adiciona mensagem ao chat
   function addMessage(content, sender = 'user') {
     const message = document.createElement('div');
     message.className = `p-4 rounded-lg max-w-[75%] ${sender === 'ia' ? 'bg-primary/10 text-gray-700' : 'bg-gray-100 text-gray-900 self-end'}`;
@@ -304,9 +304,10 @@
     scrollToBottom();
   }
 
+  // Enviar mensagem
   function sendMessage() {
     const userInput = inputField.value.trim();
-    if (userInput.length < 2) return;
+    if (!userInput) return;
 
     addMessage(userInput, 'user');
     inputField.value = '';
@@ -319,40 +320,25 @@
         const lastIaMsg = chatHistory.querySelectorAll('div.bg-primary\\/10:last-child')[0];
         if (lastIaMsg) lastIaMsg.remove();
 
-        addMessage(iaResponse(userInput), 'ia');
+        const response = iaResponse(userInput);
+        addMessage(response, 'ia');
         updateProgress();
 
         if (progress >= 100) {
-          resultSection.classList.remove('hidden');
-          chatSection.classList.add('hidden');
+          document.getElementById('resultados-ia').classList.remove('hidden');
+          document.getElementById('chat-ia').classList.add('hidden');
         }
-      }, 800);
+      }, 1000);
 
-    }, 400);
+    }, 500);
   }
 
   sendButton.addEventListener('click', sendMessage);
   inputField.addEventListener('keypress', function (e) {
     if (e.key === 'Enter') sendMessage();
   });
-
-  // Reset diagnóstico
-  function resetChat() {
-    chatHistory.innerHTML = '<div class="bg-primary/10 p-4 rounded-lg text-gray-700 max-w-[75%]">Olá! Sou a IA da AORKIA. Vamos iniciar seu diagnóstico estratégico?</div>';
-    progress = 20;
-    progressBar.style.width = progress + '%';
-    resultSection.classList.add('hidden');
-    chatSection.classList.remove('hidden');
-    inputField.focus();
-  }
-
-  // Cria botão de reset no painel de resultados
-  const resetBtn = document.createElement('button');
-  resetBtn.textContent = 'Reiniciar Diagnóstico';
-  resetBtn.className = 'mt-6 bg-secondary text-white px-6 py-3 rounded-lg hover:bg-secondary/90';
-  resetBtn.addEventListener('click', resetChat);
-  resultSection.querySelector('.flex.gap-4').appendChild(resetBtn);
 </script>
+
 
   
 </body>
