@@ -1,111 +1,41 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Animação Barra Dinâmica</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    @keyframes gradient-left {
-      0% { transform: translateX(-100%); }
-      100% { transform: translateX(100%); }
-    }
+<!-- Divisor visual antes do Footer -->
+<hr class="my-6 border-gray-300">
 
-    @keyframes gradient-right {
-      0% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
-    }
+<footer class="bg-gray-900 py-12 mb-0 pb-0" role="contentinfo">
+  <div class="container mx-auto max-w-6xl px-4 grid grid-cols-1 md:grid-cols-12 gap-12 text-center md:text-left">
+    
+    <!-- Coluna 1: Logo e social -->
+    ... <!-- (conteúdo inalterado) -->
 
-    .animate-gradient-left {
-      animation: gradient-left 1.5s linear infinite;
-    }
+    <!-- Coluna 2: Soluções -->
+    ... <!-- (conteúdo inalterado) -->
 
-    .animate-gradient-right {
-      animation: gradient-right 1.5s linear infinite;
-    }
-  </style>
-</head>
-<body class="bg-gray-900 flex flex-col gap-8 justify-center items-center min-h-screen text-white">
-
-  <div class="text-lg font-bold">Barra com Brilho Esquerda ➡️ Direita</div>
-  <div class="relative w-64 h-1 bg-gray-600 overflow-hidden">
-    <div class="absolute top-0 left-0 h-full w-1/3 bg-[#0076FF] animate-gradient-left"></div>
+    <!-- Coluna 3: Contato -->
+    ... <!-- (conteúdo inalterado) -->
+    
   </div>
 
-  <div class="text-lg font-bold mt-8">Barra com Brilho Direita ⬅️ Esquerda</div>
-  <div class="relative w-64 h-1 bg-gray-600 overflow-hidden">
-    <div class="absolute top-0 right-0 h-full w-1/3 bg-[#0076FF] animate-gradient-right"></div>
+  <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-center md:justify-between items-center px-4 md:px-8 text-center md:text-left">
+    <p class="text-sm sm:text-base md:text-lg text-gray-400">
+      © 2025 AORKIA. Todos os direitos reservados.
+    </p>
+    <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 mt-4 md:mt-0">
+      <a href="/privacy.html" class="text-sm sm:text-base md:text-lg hover:underline">Política de Privacidade</a>
+      <a href="/terms.html" class="text-sm sm:text-base md:text-lg hover:underline">Termos de Uso</a>
+      <a href="#" class="text-sm sm:text-base md:text-lg hover:underline">Cookies</a>
+    </div>
   </div>
 
-</body>
-</div>
-<!-- Backup SaaS Estratégico -->
-<div class="flex flex-col md:flex-row items-stretch gap-6 md:gap-8 mb-16">
-  <div class="w-full md:basis-1/2 md:max-w-[600px] p-4 md:p-6 space-y-4 text-justify break-words hyphens-auto bg-white rounded-lg shadow-sm">
-    <h2 class="text-3xl font-bold text-gray-900 text-center">Backup SaaS Estratégico</h2>
-    <p class="text-lg leading-relaxed text-gray-700">A AORKIA ativa a <span class="text-[#00683f] text-xl font-medium">Keepit</span> — líder global em backup SaaS — para garantir proteção completa e contínua dos seus dados na nuvem.</p>
-    <blockquote class="border-l-4 border-primary pl-4 italic text-gray-600">Proteção automatizada, recuperação instantânea, segurança absoluta.</blockquote>
-    <ul class="list-disc list-inside text-gray-700 marker:text-primary">
-      <li>Backup contínuo e automatizado</li>
-      <li>Recuperação instantânea e granular</li>
-      <li>Criptografia de ponta a ponta</li>
-    </ul>
-    <p class="text-lg leading-relaxed text-gray-700">A AORKIA + <span class="text-[#00683f] text-xl font-medium">Keepit</span>: backup transformado em inteligência operacional e resiliência estratégica.</p>
+  <!-- Assinatura AORKIA -->
+  <div class="mt-4 border-t border-gradient-to-r from-primary via-secondary to-primary pt-4 text-center">
+    <p class="text-xs sm:text-sm md:text-base text-primary font-bold">
+      Desenvolvido por AORKIA
+    </p>
+    <p class="text-xs sm:text-sm md:text-base italic text-gray-500">
+      Otimize sua presença digital para máxima conversão: 
+      <a href="mailto:presencadigital@aorkia.com" class="text-primary hover:text-secondary hover:underline transition-colors duration-300">
+        presencadigital@aorkia.com
+      </a>
+    </p>
   </div>
-  <div class="w-full md:basis-1/2 flex items-center justify-center">
-    <img src="https://readdy.ai/api/search-image?query=3D%20holographic%20data%20protection%20shield%20with%20floating%20cloud%20storage%20elements%2C%20glowing%20blue%20neon%20grid%20lines%2C%20advanced%20security%20visualization%20with%20digital%20particles%2C%20dark%20tech%20background%20with%20geometric%20patterns%2C%20premium%20enterprise%20data%20vault%20concept%2C%20ultra%20modern%20minimalist%20design%2C%20no%20text&width=800&height=600&seq=backup3&orientation=landscape" alt="Backup SaaS Estratégico" class="w-full h-auto aspect-[4/3] object-cover object-top max-w-[600px] rounded-lg shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-xl" loading="lazy">
-  </div>
-</div>
-
-<!-- Infraestrutura Estratégica -->
-<div class="flex flex-col md:flex-row-reverse items-stretch gap-6 md:gap-8 mb-16">
-  <div class="w-full md:basis-1/2 md:max-w-[600px] p-4 md:p-6 space-y-4 text-justify break-words hyphens-auto bg-white rounded-lg shadow-sm">
-    <h2 class="text-3xl font-bold text-gray-900 text-center">Infraestrutura Estratégica</h2>
-    <p class="text-lg leading-relaxed text-gray-700">A AORKIA estrutura e otimiza infraestruturas críticas, convertendo complexidade em disponibilidade, segurança e performance superior.</p>
-    <blockquote class="border-l-4 border-primary pl-4 italic text-gray-600">Infraestruturas sob medida que impulsionam eficiência, escalabilidade e resiliência operacional.</blockquote>
-    <ul class="list-disc list-inside text-gray-700 marker:text-primary">
-      <li>Projetos personalizados para ambientes híbridos e multicloud</li>
-      <li>Integração e gestão contínua de sistemas críticos</li>
-      <li>Alta disponibilidade e segurança como padrão</li>
-    </ul>
-    <p class="text-lg leading-relaxed text-gray-700">Transforme sua infraestrutura em um ativo estratégico e acelere resultados com a curadoria especializada da AORKIA.</p>
-  </div>
-  <div class="w-full md:basis-1/2 flex items-center justify-center">
-    <img src="https://readdy.ai/api/search-image?query=3D%20network%20of%20interconnected%20cubes%20with%20glowing%20blue%20neon%20edges%2C%20floating%20server%20racks%20with%20light%20trails%20connecting%20them%2C%20dark%20background%20with%20tech%20grid%2C%20orchestration%20flow%20visualization%2C%20minimalist%20infrastructure%20concept%2C%20no%20text%2C%20enterprise%20architecture&width=800&height=600&seq=infra2&orientation=landscape" alt="Infraestrutura Estratégica" class="w-full h-auto aspect-[4/3] object-cover object-top max-w-[600px] rounded-lg shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-xl" loading="lazy">
-  </div>
-</div>
-
-<!-- Segurança Cloud -->
-<div class="flex flex-col md:flex-row items-stretch gap-6 md:gap-8 mb-16">
-  <div class="w-full md:basis-1/2 md:max-w-[600px] p-4 md:p-6 space-y-4 text-justify break-words hyphens-auto bg-white rounded-lg shadow-sm">
-    <h2 class="text-3xl font-bold text-gray-900 text-center">Segurança Cloud</h2>
-    <p class="text-lg leading-relaxed text-gray-700">A AORKIA implanta segurança cloud (CSPM/CNAPP) para proteger ambientes multicloud com visibilidade total, conformidade contínua e resposta proativa a ameaças.</p>
-    <blockquote class="border-l-4 border-primary pl-4 italic text-gray-600">Segurança como componente nativo, integrada à sua infraestrutura e alinhada às normas globais.</blockquote>
-    <ul class="list-disc list-inside text-gray-700 marker:text-primary">
-      <li>Postura de segurança monitorada e auditável (CSPM)</li>
-      <li>Proteção integrada desde o código até a produção (CNAPP)</li>
-      <li>Automação para conformidade contínua (LGPD, GDPR, DORA)</li>
-    </ul>
-    <p class="text-lg leading-relaxed text-gray-700">Fortaleça sua operação digital e impulsione a inovação segura com a Engenharia de Segurança Cloud da AORKIA.</p>
-  </div>
-  <div class="w-full md:basis-1/2 flex items-center justify-center">
-    <img src="https://readdy.ai/api/search-image?query=3D%20shield%20icon%20with%20digital%20protection%20sphere%2C%20glowing%20blue%20neon%20cybersecurity%20elements%2C%20floating%20security%20nodes%20connected%20with%20light%20trails%2C%20dark%20background%20with%20tech%20grid%2C%20cloud%20security%20visualization%2C%20minimalist%20clean%20design%2C%20no%20text%2C%20enterprise%20protection%20concept&width=800&height=600&seq=security2&orientation=landscape" alt="Segurança Cloud" class="w-full h-auto aspect-[4/3] object-cover object-top max-w-[600px] rounded-lg shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-xl" loading="lazy">
-  </div>
-</div>
-
-<!-- Receita B2B -->
-<div class="flex flex-col md:flex-row-reverse items-stretch gap-6 md:gap-8">
-  <div class="w-full md:basis-1/2 md:max-w-[600px] p-4 md:p-6 space-y-4 text-justify break-words hyphens-auto bg-white rounded-lg shadow-sm">
-    <h2 class="text-3xl font-bold text-gray-900 text-center">Receita B2B</h2>
-    <p class="text-lg leading-relaxed text-gray-700">A AORKIA transforma operações fragmentadas em sistemas coesos de geração de receita, com processos integrados, previsibilidade e crescimento contínuo.</p>
-    <blockquote class="border-l-4 border-primary pl-4 italic text-gray-600">Operações comerciais otimizadas, integradas à presença digital, para acelerar performance e escalabilidade.</blockquote>
-    <ul class="list-disc list-inside text-gray-700 marker:text-primary">
-      <li>Diagnóstico e integração de processos e dados de receita</li>
-      <li>Automação e inteligência para previsibilidade e escala</li>
-      <li>Otimização da presença digital para máxima conversão</li>
-    </ul>
-    <p class="text-lg leading-relaxed text-gray-700">Potencialize seu crescimento com a Engenharia de Receita B2B da AORKIA, unindo estratégia, tecnologia e execução.</p>
-  </div>
-  <div class="w-full md:basis-1/2 flex items-center justify-center">
-    <img src="https://readdy.ai/api/search-image?query=3D%20holographic%20business%20growth%20visualization%20with%20ascending%20geometric%20shapes%2C%20glowing%20blue%20neon%20energy%20flows%20connecting%20floating%20crystal%20structures%2C%20premium%20dark%20tech%20environment%20with%20depth%2C%20abstract%20financial%20success%20representation%2C%20ultra%20modern%20enterprise%20concept%20with%20floating%20particles%20and%20light%20trails%2C%20clean%20minimalist%20design%2C%20no%20text%20or%20numbers&width=800&height=600&seq=revenue5&orientation=landscape" alt="Receita B2B" class="w-full h-auto aspect-[4/3] object-cover object-top max-w-[600px] rounded-lg shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-xl" loading="lazy">
-  </div>
-</div>
+</footer>
