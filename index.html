@@ -73,7 +73,82 @@
         </div>
       </div>
     </section>
+<!-- Esqueleto HTML: Sistema de Chat da IA AORKIA -->
 
+<section id="chat-ia" class="py-20 bg-gradient-to-r from-gray-50 to-white">
+  <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row gap-8">
+
+    <!-- Área do Chat: 70% -->
+    <div class="w-full md:w-7/10 bg-white rounded-3xl shadow-xl p-6 flex flex-col space-y-4">
+      <div class="flex items-center gap-3 mb-4">
+        <img src="avatar_ia_aorkia.png" alt="Avatar IA" class="w-12 h-12 rounded-full border-2 border-primary animate-pulse">
+        <h2 class="text-xl font-bold text-gray-900">IA AORKIA</h2>
+      </div>
+
+      <!-- Histórico de mensagens -->
+      <div id="chat-history" class="chat-container flex-1 overflow-y-auto space-y-4">
+        <div class="bg-primary/10 p-4 rounded-lg text-gray-700 max-w-[75%]">Olá! Sou a IA da AORKIA. Vamos iniciar seu diagnóstico estratégico?</div>
+      </div>
+
+      <!-- Campo de entrada -->
+      <div class="flex items-center gap-2">
+        <input type="text" placeholder="Digite sua mensagem..." class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:outline-none">
+        <button class="bg-primary text-white px-4 py-3 rounded-lg hover:bg-primary/90 transition-all">
+          <i class="ri-send-plane-2-line text-xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Painel Lateral: 30% -->
+    <aside class="w-full md:w-3/10 bg-white rounded-3xl shadow-xl p-6 space-y-6 backdrop-blur-md">
+      <h3 class="text-lg font-semibold text-gray-900">Status do Diagnóstico</h3>
+      <div class="w-full bg-gray-100 rounded-full h-3">
+        <div class="bg-primary h-3 rounded-full" style="width: 20%"></div>
+      </div>
+
+      <div class="space-y-2">
+        <h4 class="text-sm font-semibold text-gray-700">Áreas em Análise</h4>
+        <ul class="list-disc list-inside text-gray-600 text-sm">
+          <li>Backup SaaS Estratégico</li>
+          <li>Infraestrutura Estratégica</li>
+          <li>Segurança Cloud</li>
+          <li>Receita B2B</li>
+        </ul>
+      </div>
+
+      <div class="text-sm text-gray-500 italic">IA AORKIA está analisando seus dados em tempo real...</div>
+    </aside>
+
+  </div>
+</section>
+
+<!-- Painel de Resultados (após interação) -->
+<section id="resultados-ia" class="hidden py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-12 gap-8">
+
+    <!-- Painel expandido -->
+    <div class="md:col-span-8 bg-white rounded-3xl shadow-xl p-8 space-y-6">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Recomendações Estratégicas</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2">
+        <li>Fortalecer a estratégia de backup com Keepit para resiliência total.</li>
+        <li>Otimizar a infraestrutura crítica para escalabilidade.</li>
+        <li>Ativar automação em Segurança Cloud com CSPM/CNAPP.</li>
+        <li>Unificar processos de Receita B2B para previsibilidade.</li>
+      </ul>
+      <div class="flex gap-4">
+        <a href="#" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/90">Acessar Blueprint Técnico</a>
+        <a href="#" class="border border-primary text-primary px-6 py-3 rounded-lg hover:bg-primary/10">Agendar Conversa</a>
+      </div>
+    </div>
+
+    <!-- Chat minimizado -->
+    <div class="md:col-span-4 bg-gray-50 rounded-3xl shadow-lg p-6 space-y-4">
+      <h3 class="text-lg font-semibold text-gray-900">Histórico</h3>
+      <div class="text-gray-600 text-sm">Resumo da interação com a IA AORKIA.</div>
+    </div>
+
+  </div>
+</section>
     <section id="solucoes" class="py-20">
       <div class="max-w-7xl mx-auto px-4 text-center mb-16">
         <h2 class="text-3xl font-bold mb-4">Nossas Soluções Especializadas</h2>
